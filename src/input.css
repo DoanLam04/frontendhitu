@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Londrina+Shadow&display=swap');
+
+/* Hiệu ứng trượt */
+@keyframes slide {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.slide-animation {
+    display: inline-block;
+
+
+    animation: slide 20s;
+    width: 800px;
+    /* Đảm bảo chiều rộng không bị cắt */
+    /* Nếu cần, có thể điều chỉnh left để bắt đầu từ ngoài màn hình bên trái */
+    left: 100%;
+
+}
+
+.relative {
+
+
+    /* Đảm bảo phần tử không bị cắt */
+}
+
+/* Nếu muốn thêm khoảng cách giữa các phần tử */
+.spacing {
+    margin-right: 8rem;
+}
+
+.new-arrivals {
+    font-family: "Londrina Shadow", sans-serif;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+    /* Ẩn thanh cuộn trên các trình duyệt dựa trên WebKit (Chrome, Safari) */
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    /* Ẩn thanh cuộn trên Internet Explorer và Edge cũ */
+    scrollbar-width: none;
+    /* Ẩn thanh cuộn trên Firefox */
+}
+
+/* Optional: nếu muốn điều chỉnh cách cuộn cho thiết bị cảm ứng */
+.no-scrollbar {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.group:hover .group-hover\:scale-110 {
+    transform: scale(1.10);
+    /* Điều chỉnh tỷ lệ phóng to theo ý muốn */
+}
+
+.group {
+    position: relative;
+}
+
+.group-hover\:scale-110 {
+    transition: transform 0.3s ease;
+}
